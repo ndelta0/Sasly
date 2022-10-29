@@ -1,6 +1,6 @@
 namespace Sasly;
 
-public class SaslMechanisms
+public static class SaslMechanisms
 {
-    
+    public const string Plain = "PLAIN";
 }

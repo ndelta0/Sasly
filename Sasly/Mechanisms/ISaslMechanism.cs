@@ -1,4 +1,4 @@
-namespace Sasly;
+namespace Sasly.Mechanisms;
 
 public interface ISaslMechanism : IDisposable
 {

@@ -1,10 +1,10 @@
 using System.Text;
 
-namespace Sasly;
+namespace Sasly.Mechanisms;
 
-public class SaslPlain : ISaslMechanism
+internal sealed class SaslPlain : ISaslMechanism
 {
-    public string Name => "PLAIN";
+    public static string Name => SaslMechanisms.Plain;
 
     public bool IsCompleted { get; private set; }
 
@@ -31,4 +31,7 @@ public class SaslPlain : ISaslMechanism
         IsCompleted = true;
         return Encoding.UTF8.GetBytes($"\0{username}\0{password}");
     }
+
+    public void Dispose()
+    { }
 }
